@@ -1,0 +1,12 @@
+@import 'tailwindcss';
+
+.social-icon {
+    color: #fff;
+    width: 20px;
+}
+.rotate {
+    transform: rotate(180deg);
+}
+#kollabarrow {
+    transition: transform 0.3s ease;
+}
