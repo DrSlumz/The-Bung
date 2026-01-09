@@ -64,20 +64,19 @@
                 </svg>
                 <nav id="navmobile" class="text-white hidden">
                     <ul
-                        class="flex flex-col gap-5 absolute top-29 left-0 bg-black w-full p-5 h-100"
+                        class="flex flex-col gap-5 absolute top-29 left-0 bg-black w-full p-5 h-100 z-2"
                         id="navmenu"
                     >
                         <li><a href="#">APPREAL</a></li>
                         <li><a href="#">ACCESORIES</a></li>
                         <li><a href="#">MUSIC</a></li>
                         <li><a href="#">KOFFEE</a></li>
-                        <li>
+                        <li id="kollabMobile">
                             <div
                                 class="flex gap-1 items-center cursor-pointer justify-between"
-                                id="kollabMobile"
                             >
-                                <a href="#">KOLLABS</a
-                                ><span
+                                <p>KOLLABS</p>
+                                <span
                                     ><svg
                                         id="kollabarrow-mobile"
                                         xmlns="http://www.w3.org/2000/svg"
@@ -91,9 +90,8 @@
                                         />
                                     </svg>
                                 </span>
-                                <div>
+                                <div class="max-md:hidden">
                                     <svg
-                                        class="max-md:hidden"
                                         xmlns="http://www.w3.org/2000/svg"
                                         height="24px"
                                         viewBox="0 -960 960 960"
@@ -254,15 +252,13 @@
                 </svg>
             </div>
         </header>
-        <div>
-            <video
-                class="z-1"
-                autoplay="autoplay"
-                loop="loop"
-                muted="muted"
-                src="src\assets\kornvid.mp4"
-            ></video>
-        </div>
+        <video
+            class="flex"
+            autoplay="autoplay"
+            loop="loop"
+            muted="muted"
+            src="src\assets\kornvid.mp4"
+        ></video>
         <div class="productsec">
             <div class="productsecheader">
                 <h1
@@ -1005,6 +1001,6 @@
                 </a>
             </div>
         </footer>
-        <script src="script.js"></script
+        <script src="script.js"></script>
     </body>
 </html>

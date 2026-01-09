@@ -28,10 +28,12 @@ const toggleMenuHam = () => {
 };
 hamburg.addEventListener('click', toggleMenuHam);
 
-const kollabBtnMobile = document.getElementById('kollabarrow-mobile');
+const kollabBtnMobile = document.getElementById('kollabMobile');
 const kollabboxMobile = document.getElementById('kollabboxMobile');
 
-const toggleKollabMobile = () => {
+const toggleKollabMobile = (e) => {
+    e.preventDefault();
+
     if (menu.classList.contains('flex')) {
         menu.classList.remove('flex');
         menu.classList.add('hidden');
@@ -48,6 +50,7 @@ const toggleKollabMobile = () => {
         kollabboxMobile.classList.remove('flex');
     }
 };
+
 kollabBtnMobile.addEventListener('click', toggleKollabMobile);
 
 const backFromKollabToMenu = document.getElementById('kollabarrowback');
