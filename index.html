@@ -945,20 +945,56 @@
                 merch offers and the latest news from Korn.
             </p>
             <div class="flex gap-5">
-                <form class="outline-solid outline-white text-white">
-                    <label for="enter your email"
-                        ><input
+                <div class="flex flex-col gap-2 relative">
+                    <form
+                        id="submit"
+                        class="outline-solid outline-white text-white"
+                    >
+                        <input
+                            id="email"
                             class="text-white w-100 h-10 p-5 max-md:w-50"
                             type="email"
                             placeholder="Enter your email"
-                        />
-                    </label>
-                </form>
-                <a
-                    class="outline-solid outline-white text-white w-20 h-10 flex justify-center items-center"
-                    href="#"
-                    >Subscribe</a
+                        /><label
+                            id="emailwrong"
+                            value="enter your email"
+                            class="flex text-red-500 absolute top-12"
+                            for="email"
+                        ></label>
+                    </form>
+                </div>
+                <div class="flex items-start">
+                    <button
+                        id="subbutton"
+                        class="cursor-pointer outline-solid outline-white text-white w-20 h-10 flex justify-center items-center"
+                        href="#"
+                    >
+                        Subscribe
+                    </button>
+                </div>
+            </div>
+            <div
+                id="successbox"
+                class="emailsuccess bg-black outline-1 text-amber-50 flex-col gap-4 p-5 rounded-xl fixed top-1.5 hidden"
+            >
+                <svg
+                    id="close"
+                    class="absolute cursor-pointer"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24px"
+                    viewBox="0 -960 960 960"
+                    width="24px"
+                    fill="#e3e3e3"
                 >
+                    <path
+                        d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                    />
+                </svg>
+
+                <h1 class="text-5xl">Thank you!</h1>
+                <h2 class="text-2xl">
+                    Now you will see ours brand new offer right away.
+                </h2>
             </div>
         </div>
         <footer

@@ -132,3 +132,41 @@ const productHover4 = () => {
 };
 hover4.addEventListener('mouseover', productHover4);
 hover4.addEventListener('mouseout', productHover4);
+
+const emailInput = document.getElementById('email');
+const successBox = document.getElementById('successbox');
+const subButton = document.getElementById('subbutton');
+const emailWrong = document.getElementById('emailwrong');
+const closeButton = document.getElementById('close');
+
+const validateEmail = () => {
+    const emailTypeValid = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    if (!emailInput.value.match(emailTypeValid)) {
+        emailWrong.innerHTML = 'Wrong One Punk';
+        emailInput.classList.add('emailValidate');
+        return false;
+    } else {
+        emailInput.classList.remove('emailValidate');
+        return true;
+    }
+};
+
+const openMassage = () => {
+    if (validateEmail()) {
+        successBox.classList.remove('hidden');
+        successBox.classList.add('flex');
+        emailWrong.innerHTML = '';
+        emailInput.value = '';
+    }
+};
+
+subButton.addEventListener('click', openMassage);
+
+const closeSeccess = () => {
+    if (successBox.classList.contains('flex')) {
+        successBox.classList.remove('flex');
+        successBox.classList.add('hidden');
+    }
+};
+closeButton.addEventListener('click', closeSeccess);
